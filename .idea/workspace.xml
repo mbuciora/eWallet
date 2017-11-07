@@ -19,22 +19,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/apps.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/models.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/circle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/dashboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/jquery.modal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/login_register.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/services.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/settings.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/css/users.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/fonts/glyphicons-halflings-regular.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/js/bootstrap.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eWallet_app/static/js/bootstrap.min.js" />
@@ -73,7 +59,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eWallet_app/static/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/eWallet_app/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding>
+                <element signature="e#1284#1290#1" expanded="true" />
+                <element signature="e#1548#1554#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,12 +126,12 @@
         <option value="$PROJECT_DIR$/eWallet/template_urls.py" />
         <option value="$PROJECT_DIR$/eWallet/urls.py" />
         <option value="$PROJECT_DIR$/eWallet_app/view/IndexView.py" />
-        <option value="$PROJECT_DIR$/eWallet_app/templates/index.html" />
         <option value="$PROJECT_DIR$/eWallet_app/static/style.css" />
+        <option value="$PROJECT_DIR$/eWallet_app/templates/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="450" />
     <option name="y" value="45" />
     <option name="width" value="1400" />
@@ -153,6 +163,35 @@
             </path>
             <path>
               <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+              <item name="eWallet_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+              <item name="eWallet_app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+              <item name="eWallet_app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eWallet" type="462c0819:PsiDirectoryNode" />
+              <item name="eWallet_app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eWallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -164,6 +203,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Inżynierka/eWallet/eWallet_app/static/style.css" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -231,12 +271,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37173912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37173912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -313,13 +353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1209">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/eWallet_app/models.py" />
     <entry file="file://$PROJECT_DIR$/server/eWallet_app/views.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/core/management/commands/runserver.py">
@@ -476,6 +509,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -490,6 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -497,6 +534,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -519,6 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -536,17 +577,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eWallet_app/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/eWallet_app/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        <state relative-caret-position="153">
+          <caret line="4" column="1054" lean-forward="true" selection-start-line="4" selection-start-column="1054" selection-end-line="4" selection-end-column="1054" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eWallet_app/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        <state relative-caret-position="34">
+          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eWallet_app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="e#1284#1290#1" expanded="true" />
+            <element signature="e#1548#1554#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
