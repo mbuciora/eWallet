@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+
+
+{% if all_changes %}
+<h3>Here are all my changes</h3>
+<ul>
+    {% for change in all_changes %}
+    <li><a href="{% url 'detail' change.change_detail_id %}">{{ change.title }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>You don't have any changes</h3>
+{% endif %}

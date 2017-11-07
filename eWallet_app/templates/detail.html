@@ -1,0 +1,12 @@
+<h1>{{ change.title }}</h1>
+<h3>Kwota: {{ change.amount }}</h3>
+<h3>
+    {% if change.revenue is True %}
+        <font color="red">Wydatek</font>
+    {% endif %}
+    {% if change.revenue is False %}
+        <font color="green">Przychód</font>
+    {% endif %}
+</h3>
+<h3>Data dodania: {{ change.date }}</h3>
+<h3>Opis: {{ change.description }}</h3>
