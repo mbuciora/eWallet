@@ -1,47 +1,61 @@
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+{% extends 'base.html' %}
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+{% block body %}
+<div class="changes-container container-fluid">
 
-            <a class="navbar-brand" href="{% url 'index' %}"><em><font face="New Baskerville" size="6">eWallet</font></em></a>
+    <!-- Change -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 align="center">Welcome to eWallet application!</h2>
+            <h3>Here You can see all of your changes made in the past:</h3>
+            <br>
+        </div>
+        {% if object_list %}
+        {% for changedetail in object_list %}
+        <div class="col-sm-4 col-lg-2">
+            <div class="thumbnail">
+
+                <div class="caption">
+                    <h2>{{ changedetail.title }}</h2>
+                    <h4>{{ changedetail.amount }} zł ----------
+                        {% if changedetail.revenue is True %}
+                        <font color="red">Expenditure</font>
+                        {% endif %}
+                        {% if changedetail.revenue is False %}
+                        <font color="green">Income</font>
+                        {% endif %}
+                    </h4>
+                    <h4>{{ changedetail.date }}</h4>
+
+                    <!-- View Details -->
+                    <a href="{% url 'detail' changedetail.change_detail_id %}" class="btn btn-primary btn-sm"
+                       role="button">View Details</a>
+
+                    <!-- Delete Album -->
+                    <form action="{% url 'change-remove' changedetail.change_detail_id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="changedetail.change_detail.id" value="{{ changedetail.change_detail_id }}"/>
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
         </div>
 
-        <!-- Items -->
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="{% url 'index' %}">
-                        <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>&nbsp;<font face="New Baskerville" size="4">Finance</font>
-                    </a>
-                </li>
-                 <li class="">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>&nbsp;<font face="New Baskerville" size="4">Operations</font>
-                    </a>
-                </li>
-            </ul>
+        {% endfor %}
+        {% else %}
+        <div class="col-sm-12">
+            <br>
+            <a href="#">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp; Add an Change
+                </button>
+            </a>
         </div>
+        {% endif %}
     </div>
-</nav>
 
-{% if all_changes %}
-<h3>Here are all my changes</h3>
-<ul>
-    {% for change in all_changes %}
-    <li><a href="{% url 'detail' change.change_detail_id %}">{{ change.title }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<h3>You don't have any changes</h3>
-{% endif %}
+</div>
+{% endblock %}

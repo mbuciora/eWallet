@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <div class="col-sm-8 col-md-9">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3><font size="6">Here You can see list with the groups which You belongs to: </font></h3>
+
+                    {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><font size="4">Name</font></th>
+                            <th><font size="4">Group Account Balance</font></th>
+                            <th><font size="4">Count of group members</font></th>
+                            <th><font size="4">Expenses per person</font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if object_list %}
+                        {% for group in object_list %}
+                        <tr>
+                            <td><strong><a href="{% url 'group' group.group_id %}"> {{ group.name }}</a></strong></td>
+                            <td><strong>{{ group.expenses_amount }} zł</strong></td>
+                            <td>
+                                <strong>{{ group.members_count }} </strong>
+                            </td>
+                            <td><strong>{{ group.expenses_per_person }}</strong></td>
+
+                        </tr>
+{% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+        {% else %}
+        <div class="col-sm-12">
+            <br>
+            <a href="#">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp; Add an Change
+                </button>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

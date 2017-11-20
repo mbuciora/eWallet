@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ changedetail }}{% endblock %}
+{% block title %}{{ group }}{% endblock %}
 {% block albums_active %}active{% endblock %}
 
 {% block body %}
@@ -11,15 +11,17 @@
 
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
                 <li role="presentation" class="active">
-                    <a href="{% url 'index' %}">View All</a>
+                    <a href="{% url 'groups' %}">View All</a>
                 </li>
-                <li role="presentation"><a href="{% url 'change-add' %}">Add New Change</a></li>
+                <li role="presentation"><a href="{% url 'add-user-to-group' %}">Add New Members</a></li>
+                <li role="presentation"><a href="{% url 'index' %}">Group changes</a></li>
+                <li role="presentation"><a href="{% url 'change-add' %}">Add change to group</a></li>
             </ul>
 
             <div class="panel panel-default">
                 <div class="panel-body">
 
-                    <h3><font size="6">Change detail</font></h3>
+                    <h3><font size="6">Group detail</font></h3>
 
                     {% if error_message %}
                     <p><strong>{{ error_message }}</strong></p>
@@ -28,39 +30,32 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th><font size="4">Title</font></th>
-                            <th><font size="4">Amount</font></th>
-                            <th><font size="4">Revenue</font></th>
-                            <th><font size="4">Description</font></th>
+                            <th><font size="4">Name</font></th>
+                            <th><font size="4">Group Account Balance</font></th>
+                            <th><font size="4">Count of group members</font></th>
+                            <th><font size="4">Expenses per person</font></th>
                         </tr>
                         </thead>
                         <tbody>
 
                         <tr>
-                            <td><strong>{{ changedetail.title }}</strong></td>
-                            <td><strong>{{ changedetail.amount }} <strong> zł</strong></td>
+                            <td><strong>{{ group.name }}</strong></td>
+                            <td><strong>{{ group.expenses_amount }} zł</strong></td>
                             <td>
-                                <strong>
-                                    {% if changedetail.revenue is True %}
-                                        Yes
-                                    {% endif %}
-                                    {% if changedetail.revenue is False %}
-                                        No
-                                    {% endif %}
-                                </strong>
+                                <strong>{{ group.members_count }} </strong>
                             </td>
-                            <td><strong>{{ changedetail.description }}</strong></td>
-                            <td>
-                                <form action="{% url 'change-remove' changedetail.change_detail_id %}" method="post"
+                            <td><strong>{{ group.expenses_per_person }}</strong></td>
+                             <td>
+                                <form action="{% url 'group-remove' group.group_id %}" method="post"
                                       style="display: inline;">
                                     {% csrf_token %}
-                                    <input type="hidden" name="changedetail.change_detail.id"
-                                           value="{{ changedetail.change_detail_id }}"/>
+                                    <input type="hidden" name="group.group_id"
+                                           value="{{ group.group_id }}"/>
                                     <button type="submit" class="btn btn-default btn-xs">
                                         <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
                                     </button>
                                 </form>
-                                <a href="{% url 'change-update' changedetail.change_detail_id %}">
+                                <a href="{% url 'group-update' group.group_id %}">
                                     <button type="submit" class="btn btn-default btn-xs">
                                         <span class="glyphicon glyphicon-arrow-up"></span>&nbsp; Update
                                     </button>

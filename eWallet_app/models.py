@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class User(models.Model):
@@ -24,6 +25,9 @@ class Group(models.Model):
         return self.name
 
 
+    def get_absolute_url(self):
+        return reverse('group', kwargs={'pk': self.pk})
+
 class UserGroup(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE)
@@ -40,8 +44,9 @@ class ChangeDetail(models.Model):
     revenue = models.BooleanField()
     date = models.DateField(null=False, auto_now=True)
 
-    def __str__(self):
-        return self.title
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'pk': self.pk})
+
 
 
 class GroupChange(models.Model):
