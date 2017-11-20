@@ -1,0 +1,29 @@
+body {
+    background: white url("images/mooning.png");
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+    font-size: 25;
+}
+
+.navbar-collapse {
+    font-family: 'New Baskerville', cursive;
+    font-size: 16;
+}
+
+.form-group {
+    font-weight: bold;
+}
+
+.btn-default {
+    font-weight: bold;
+}
+
+#inner {
+
+}
