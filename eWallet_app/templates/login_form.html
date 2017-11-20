@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Main Page of eWallet app{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="margin-top:50px; margin-left:50px;">
+        <div class="col-sm-12 col-md-4" style="width:550px;">
+            <div class="panel panel-default">
+                <div class="panel-body" >
+
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'form-template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-5  col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+
+                            </div>
+                        </div>
+                    </form>
+                    <strong>If You don't have any account, please </strong>
+                    <a href="{% url 'register' %}">register</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+</body>
+</html>

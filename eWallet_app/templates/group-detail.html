@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}{{ group }}{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active">
+                    <a href="{% url 'groups' %}">View All</a>
+                </li>
+                <li role="presentation"><a href="{% url 'add-user-to-group' %}">Add New Members</a></li>
+                <li role="presentation"><a href="{% url 'index' %}">Group changes</a></li>
+                <li role="presentation"><a href="{% url 'change-add' %}">Add change to group</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3><font size="6">Group detail</font></h3>
+
+                    {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><font size="4">Name</font></th>
+                            <th><font size="4">Group Account Balance</font></th>
+                            <th><font size="4">Count of group members</font></th>
+                            <th><font size="4">Expenses per person</font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td><strong>{{ group.name }}</strong></td>
+                            <td><strong>{{ group.expenses_amount }} zł</strong></td>
+                            <td>
+                                <strong>{{ group.members_count }} </strong>
+                            </td>
+                            <td><strong>{{ group.expenses_per_person }}</strong></td>
+                            <td>
+
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

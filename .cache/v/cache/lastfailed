@@ -1,0 +1,4 @@
+{
+  "eWallet_app/tests/test_views.py::TestView::()::test_userchange": true,
+  "eWallet_app/tests/test_views.py::TestViews::()::test_userchange": true
+}

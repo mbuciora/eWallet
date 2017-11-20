@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="changes-container container-fluid">
+
+    <!-- Change -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 align="center">Welcome to eWallet application!</h2>
+            <h3>Here You can see all of your changes made in the past:</h3>
+            <br>
+        </div>
+        {% if object_list %}
+        {% for changedetail in object_list %}
+        <div class="col-sm-4 col-lg-2">
+            <div class="thumbnail">
+
+                <div class="caption">
+                    <h2>{{ changedetail.title }}</h2>
+                    <h4>{{ changedetail.amount }} zł ----------
+                        {% if changedetail.revenue is True %}
+                        <font color="red">Expenditure</font>
+                        {% endif %}
+                        {% if changedetail.revenue is False %}
+                        <font color="green">Income</font>
+                        {% endif %}
+                    </h4>
+                    <h4>{{ changedetail.date }}</h4>
+
+                    <!-- View Details -->
+                    <a href="{% url 'detail' changedetail.change_detail_id %}" class="btn btn-primary btn-sm"
+                       role="button">View Details</a>
+
+                    <!-- Delete Album -->
+                    <form action="{% url 'change-remove' changedetail.change_detail_id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="changedetail.change_detail.id" value="{{ changedetail.change_detail_id }}"/>
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <div class="col-sm-12">
+            <br>
+            <a href="#">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp; Add an Change
+                </button>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}
