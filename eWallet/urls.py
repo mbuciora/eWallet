@@ -3,10 +3,13 @@ from django.contrib import admin
 from eWallet_app import views
 from eWallet_app.view import IndexView
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^users/', views.UserList.as_view()),
     url(r'^listgroup/', views.GroupList.as_view()),
+
+
     url(r'^usergroup/', views.UserGroupList.as_view()),
     url(r'^changedetail/', views.ChangeDetailList.as_view()),
     url(r'^gcdetail/', views.GroupChangeList.as_view()),
@@ -40,3 +43,4 @@ urlpatterns = [
 
     url(r'group/(?P<pk>[0-9]+)/delete/$', IndexView.DeleteGroup.as_view(), name='group-remove'),
 ]
+

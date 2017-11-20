@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 
+
 class User(models.Model):
     user_id = models.AutoField(primary_key=True, null=False)
     username = models.CharField(null=False, unique=True, max_length=60)
@@ -22,6 +23,7 @@ class Group(models.Model):
 
     def __str__(self):
         return self.name
+
 
     def get_absolute_url(self):
         return reverse('group', kwargs={'pk': self.pk})
@@ -45,8 +47,6 @@ class ChangeDetail(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'pk': self.pk})
 
-    def __str__(self):
-        return self.title
 
 
 class GroupChange(models.Model):
